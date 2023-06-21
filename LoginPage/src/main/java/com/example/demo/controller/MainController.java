@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,5 +16,10 @@ public class MainController {
 	@RequestMapping("/LoginCheck")
 	public void loginCheck() {
 		
+	}
+	@PostMapping("/login/new")
+	@ResponseBody
+	public String newMember(String name){
+		return name;
 	}
 }
